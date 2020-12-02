@@ -6,9 +6,9 @@ namespace Prova
     {
         static void Main(string[] args)
         {
-            uint n1 = Esegui.InserisciInteroPositivo();
-            uint n2 = Esegui.InserisciInteroPositivo();
-            Esegui.ContaPariDispari(n1);
+            uint min = Esegui.InserisciInteroPositivo();
+            uint max = Esegui.InserisciInteroPositivo();
+            Esegui.ContaPariDispari(min, max);
         }
     }
 }

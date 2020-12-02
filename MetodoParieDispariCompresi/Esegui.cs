@@ -10,22 +10,26 @@ namespace MetodoParieDispariCompresi
             uint n = uint.Parse(Console.ReadLine());
             return n;
         }
-        public static void ContaPariDispari(uint min, uint max)
+        public static void ContaPariDispari(uint n1, uint n2)
         {
-            int c_pari, c_dispari;
-            do
-            {
-                Console.WriteLine("Inserisci il valore minimo: ");
-                min = InserisciInteroPositivo();
-                Console.WriteLine("Inserisci il valore massimo: ");
-                max = InserisciInteroPositivo();
-            } while (min <= max && min<0 && max <0);
+            uint c_pari=0, c_dispari=0;
+            uint min = Math.Min(n1, n2);
+            uint max = Math.Max(n1, n2);
        
-            for(uint i=min; i==max;i++)
+            for(uint i = min; i <= max; i++)
             {
-                int resto = i % 2 == 0;
-                
+                if (i % 2 == 0)
+                {
+                    Console.WriteLine($" {i} è pari");
+                    c_pari++;
+                }
+                else
+                {
+                    Console.WriteLine($"{i} è dispari");
+                    c_dispari++;
+                }
             }
+            Console.WriteLine($"I pari sono {c_pari} e i dispari sono {c_dispari}");
         }
     }
 }
